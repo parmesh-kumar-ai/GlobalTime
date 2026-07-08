@@ -1,0 +1,2224 @@
+
+> globetime@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.3:3000
+✓ Ready in 1429ms
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\pksar\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\pksar\source\repos\globetime\package-lock.json
+
+
+ GET / 200 in 397ms (next.js: 192ms, application-code: 204ms)
+✓ Compiled in 682ms
+ GET / 200 in 200ms (next.js: 68ms, application-code: 132ms)
+ GET / 200 in 131ms (next.js: 18ms, application-code: 113ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 196ms (next.js: 12ms, application-code: 184ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 221ms (next.js: 13ms, application-code: 208ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET /? 200 in 54ms (next.js: 8ms, application-code: 47ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 74ms (next.js: 7ms, application-code: 67ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 75ms (next.js: 11ms, application-code: 64ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 59ms (next.js: 10ms, application-code: 49ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 71ms (next.js: 12ms, application-code: 59ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 100ms (next.js: 8ms, application-code: 92ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 126ms (next.js: 9ms, application-code: 117ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 240ms (next.js: 12ms, application-code: 228ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 117ms (next.js: 10ms, application-code: 107ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 163ms (next.js: 9ms, application-code: 154ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 49ms (next.js: 8ms, application-code: 42ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 61ms (next.js: 5ms, application-code: 56ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 61ms (next.js: 7ms, application-code: 54ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 58ms (next.js: 8ms, application-code: 51ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 44ms (next.js: 8ms, application-code: 36ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 49ms (next.js: 11ms, application-code: 38ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 41ms (next.js: 7ms, application-code: 34ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
+ GET / 200 in 38ms (next.js: 8ms, application-code: 30ms)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper.useEffect (src/components/MapWrapper.tsx:9:7)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] React has detected a change in the order of Hooks called by MapWrapper. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useState                   useState
+2. useEffect                  useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTheme (src/context/ThemeContext.tsx:15:29)
+    at Map (src/components/Map.tsx:24:29)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  13 |
+  14 | export const useTheme = () => {
+> 15 |   const context = useContext(ThemeContext);
+     |                             ^
+  16 |   if (!context) {
+  17 |     throw new Error('useTheme must be used within a ThemeProvider');
+  18 |   } (src/context/ThemeContext.tsx:15:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at useTime (src/context/TimeContext.tsx:12:29)
+    at Map (src/components/Map.tsx:25:30)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  10 |
+  11 | export const useTime = () => {
+> 12 |   const context = useContext(TimeContext);
+     |                             ^
+  13 |   if (!context) {
+  14 |     throw new Error('useTime must be used within a TimeProvider');
+  15 |   } (src/context/TimeContext.tsx:12:29)
+[browser] Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks 
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => { (src/components/Map.tsx:26:21)
+[browser] Uncaught Error: No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>
+    at Map (src/components/Map.tsx:26:21)
+    at MapWrapper (src/components/MapWrapper.tsx:5:51)
+    at RootLayout (src\app\layout.tsx:37:13)
+  24 |   const { theme } = useTheme();
+  25 |   const { utcTime } = useTime();
+> 26 |   const map = useMap();
+     |                     ^
+  27 |   const [hoveredCity, setHoveredCity] = useState<typeof cities[number] | null>(null);
+  28 |
+  29 |   useEffect(() => {
